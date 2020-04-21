@@ -1,0 +1,44 @@
+﻿@model QuintaApp.Models.Funcionario
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Funcionário</h2>
+
+@*<form action="~/Funcionario/Listar" method="post">*@
+
+@using (Html.BeginForm("Listar", "Funcionario", FormMethod.Post))
+{
+    <fieldset>
+        <legend>Dados de funcionário</legend>
+    </fieldset>
+    <div>
+        <label for="FuncId">Código</label>
+    </div>
+    <div>
+        @*<input type="number" value="@Model.FuncId" name="FuncId" />*@
+        @Html.EditorFor(x => x.FuncId)
+    </div>
+    <br />
+
+    <div>
+        <label for="FuncNome">Nome</label>
+    </div>
+    <div>
+        <input type="text" value="@Model.FuncNome" name="FuncNome" />
+    </div>
+    <br />
+
+    <div>
+        <label for="FuncFuncao">Função</label>
+    </div>
+    <div>
+        <input type="text" value="@Model.FuncFuncao" name="FuncFuncao" />
+    </div>
+    <br />
+
+    <input type="submit" value="Enviar" />
+}
+@*</form>*@
+

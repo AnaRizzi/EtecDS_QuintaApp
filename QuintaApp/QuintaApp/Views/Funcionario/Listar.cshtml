@@ -1,0 +1,32 @@
+﻿@model QuintaApp.Models.Funcionario
+@{
+    ViewBag.Title = "Listar";
+}
+
+<h2>Listar</h2>
+
+<div>
+    <b>Id do funcionário:</b>
+</div>
+<div>
+    @Model.FuncId
+</div>
+
+<div>
+    <b>Nome do funcionário:</b>
+</div>
+<div>
+    @Model.FuncNome
+</div>
+
+<div>
+    <b>Função do funcionário:</b>
+</div>
+<div>
+    @Model.FuncFuncao
+</div>
+
+<br />
+@*<a href="~/">Voltar</a>*@
+
+@Html.ActionLink("Voltar", "Index", "Home")
