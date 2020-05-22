@@ -1,0 +1,80 @@
+﻿@model QuintaApp.Models.Usuario
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Validação de Usuário</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true);
+<fieldset>
+    <legend>Dados do usuário</legend>
+    <div class="editor-label">
+        @Html.LabelFor(m => m.UsuNome)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.UsuNome)
+        @Html.ValidationMessageFor(m => m.UsuNome, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(m => m.UsuObs)
+    </div>
+    <div class="editor-field">
+        @Html.TextAreaFor(m => m.UsuObs)
+        @Html.ValidationMessageFor(m => m.UsuObs, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(m => m.UsuNasc)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.UsuNasc)
+        @Html.ValidationMessageFor(m => m.UsuNasc, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(m => m.UsuEmail)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.UsuEmail)
+        @Html.ValidationMessageFor(m => m.UsuEmail, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(m => m.UsuLogin)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.UsuLogin)
+        @Html.ValidationMessageFor(m => m.UsuLogin, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(m => m.UsuSenha)
+    </div>
+    <div class="editor-field">
+        @Html.PasswordFor(m => m.UsuSenha)
+        @Html.ValidationMessageFor(m => m.UsuSenha, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(m => m.UsuConfirmaSenha)
+    </div>
+    <div class="editor-field">
+        @Html.PasswordFor(m => m.UsuConfirmaSenha)
+        @Html.ValidationMessageFor(m => m.UsuConfirmaSenha, "", new { @class = "text-danger" })
+    </div>
+    <br />
+
+    <p><input type="submit" value="Cadastrar" /></p>
+
+</fieldset>
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+}
+
