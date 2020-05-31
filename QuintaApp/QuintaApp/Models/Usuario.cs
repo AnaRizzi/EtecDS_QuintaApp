@@ -11,7 +11,7 @@ namespace QuintaApp.Models
     public class Usuario
     {
         //Como o id não é preenchido, ele é considerado 0
-        //[Range(1,200,ErrorMessage ="O Id deve ser entre 1 e 200")]
+        [Range(1,200,ErrorMessage ="O Id deve ser entre 1 e 200")]
         public int UsuId { get; set; }
 
         [Display(Name ="Nome")]

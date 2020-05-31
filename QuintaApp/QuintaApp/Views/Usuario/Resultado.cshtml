@@ -8,7 +8,14 @@
 
 <fieldset>
     <legend>Usuário cadastrado</legend>
-    
+
+    <div class="editor-label">
+        @Html.DisplayNameFor(m => m.UsuId)
+    </div>
+    <div class="editor-field">
+        @Html.DisplayFor(m => m.UsuId)
+    </div>
+    <br />
     <div class="editor-label">
         @Html.DisplayNameFor(m => m.UsuNome)
     </div>

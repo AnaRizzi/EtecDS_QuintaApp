@@ -12,6 +12,14 @@
 <fieldset>
     <legend>Dados do usuário</legend>
     <div class="editor-label">
+        @Html.LabelFor(m => m.UsuId)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.UsuId)
+        @Html.ValidationMessageFor(m => m.UsuId, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="editor-label">
         @Html.LabelFor(m => m.UsuNome)
     </div>
     <div class="editor-field">
